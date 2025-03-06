@@ -1,0 +1,38 @@
+<!-- Simple card: reverse
+     ====================
+
+     I've ripped out the `FrontSide` tag here,
+     as only the Simple card type uses it.
+     The Missing! card type can't use the `FrontSide`
+     tag because of the way the template is set up
+     (using a `cloze`).
+
+     So for ease of sharing styles, we'll simply
+     replicate the front code on the reverse of
+     the card, instead of using `FrontSide` tag.
+
+-->
+
+<div id="reverse">
+  <section class="gl-Card">
+    <header>
+      <h1>{{Title}}</h1>
+    </header>
+    <div class="gl-CodeBlock">
+      {{Sample (code block)}}
+      <!-- Missing! has no sample code block ... -->
+    </div>
+    <div class="gl-Card_KeyPointNotes">
+      <hr class="answer_separator" />
+    </div>
+    <div id="answer">
+      <div class="gl-Card_KeyPoint">
+        <div class="gl-Card_KeyPointNotes">{{Key point notes}}</div>
+        <!-- <div class="gl-Example"><b>Example:</b></div> -->
+        <div class="gl-CodeBlock">{{Key point (code block)}}</div>
+      </div>
+      <!-- 
+      <footer></footer> -->
+    </div>
+  </section>
+</div>
