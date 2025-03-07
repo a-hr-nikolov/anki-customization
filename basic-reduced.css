@@ -1,23 +1,15 @@
 :root {
-  --color-code-cloze: #f12056;
-  --color-code-cloze-background: #ffffcc;
   --color-card-l: #757575;
   --color-card-ll: #bdbdbd;
   --color-card-lll: #eceff1;
   --color-card-llll: #fff;
-  --color-nightmode-text: #fff;
-  --color-nightmode-text-light: #ccc;
-  --color-nightmode-text-dark: #333;
-  --color-nightmode-border: #ddd;
-  --color-nightmode-link: #3daee9;
-  --color-code-bold: #f12056;
-  --color-code-italic: #f67400;
-  --color-code-dark-background: #353535;
+  --color-code-dark-background: #2c2c2c;
   --color-code-dark-text-color: #efffff;
   --recursive: "Recursive";
   --font-family: var(--recursive), var(--system-ui);
   --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
 }
+
 :root {
   --color-bbbb: #000;
   --color-ll: #ddd;
@@ -28,26 +20,19 @@
   --spacing-base: 16/16;
   --spacing-m: 8/16;
   --spacing-mm: 4/16;
-  --spacing-mmm: 2/16;
-  --spacing-mmmm: 1/16;
   --spacing-three: calc(var(--spacing-ppp) * 1rem);
   --spacing-two: calc(var(--spacing-pp) * 1rem);
   --spacing: calc(var(--spacing-p) * 1rem);
   --spacing-one: calc(var(--spacing-base) * 1rem);
   --spacing-half: calc(var(--spacing-m) * 1rem);
   --spacing-quarter: calc(var(--spacing-mm) * 1rem);
-  --spacing-micro: calc(var(--spacing-mmm) * 1rem);
-  --spacing-px: calc(var(--spacing-mmmm) * 1rem);
-  --color-code-light-background: var(--color-lll);
   --system-ui: system-ui, sans-serif;
   --system-mono: ui-monospace;
   --fallback-mono: "Roboto Mono", monospace, monospace;
   --font-color: var(--color-bbbb);
   --recursive: "Recursive";
-  --consolas: "Consolas";
   --font-family: var(--recursive), var(--system-ui);
-  --font-family-mono: var(--consolas), var(--recursive), var(--system-mono),
-    var(--fallback-mono);
+  --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
   --font-size-pppppp: calc((96 / 16) * 1rem);
   --font-size-ppppp: calc((60 / 16) * 1rem);
   --font-size-pppp: calc((48 / 16) * 1rem);

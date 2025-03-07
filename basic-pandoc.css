@@ -44,10 +44,8 @@
   --fallback-mono: "Roboto Mono", monospace, monospace;
   --font-color: var(--color-bbbb);
   --recursive: "Recursive";
-  --consolas: "Consolas";
   --font-family: var(--recursive), var(--system-ui);
-  --font-family-mono: var(--consolas), var(--recursive), var(--system-mono),
-    var(--fallback-mono);
+  --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
   --font-size-pppppp: calc((96 / 16) * 1rem);
   --font-size-ppppp: calc((60 / 16) * 1rem);
   --font-size-pppp: calc((48 / 16) * 1rem);
@@ -245,7 +243,6 @@ tbody tr:last-of-type {
 :root {
   --color-code-bold: #569cd6; /* Keyword */
   --color-code-italic: #dcdcaa; /* Variable */
-  --color-code-dark-background: #1e1e1e; /* Editor background */
   --color-code-dark-text-color: #d4d4d4; /* Editor foreground */
   --color-code-dark-line-number-color: #858585; /* Line number foreground */
   --color-code-dark-line-number-background-color: #1e1e1e; /* Editor background */
