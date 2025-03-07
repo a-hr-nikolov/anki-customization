@@ -23,11 +23,6 @@ pre {
 a {
   background-color: transparent;
 }
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
 b,
 strong {
   font-weight: bolder;
@@ -38,9 +33,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-small {
-  font-size: 80%;
-}
+
 sub,
 sup {
   font-size: 75%;
@@ -58,23 +51,6 @@ img {
   border-style: none;
 }
 
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-details {
-  display: block;
-}
-summary {
-  display: list-item;
-}
-template {
-  display: none;
-}
 [hidden] {
   display: none;
 }
@@ -99,36 +75,6 @@ template {
   --spacing-micro: calc(var(--spacing-mmm) * 1rem);
   --spacing-px: calc(var(--spacing-mmmm) * 1rem);
   --color-code-light-background: var(--color-lll);
-  --color-code-light-alert: #000;
-  --color-code-light-annotation: #000;
-  --color-code-light-attribute: #000;
-  --color-code-light-base-n: #000;
-  --color-code-light-built-in: #000;
-  --color-code-light-char: #000;
-  --color-code-light-comment: #000;
-  --color-code-light-comment-var: #000;
-  --color-code-light-constant: #000;
-  --color-code-light-control-flow: #000;
-  --color-code-light-data-type: #000;
-  --color-code-light-dec-val: #000;
-  --color-code-light-documentation: #000;
-  --color-code-light-error: #000;
-  --color-code-light-extension: #000;
-  --color-code-light-float: #000;
-  --color-code-light-function: #000;
-  --color-code-light-import: #000;
-  --color-code-light-information: #000;
-  --color-code-light-keyword: #000;
-  --color-code-light-operator: #000;
-  --color-code-light-other: #000;
-  --color-code-light-preprocessor: #000;
-  --color-code-light-region-marker: #000;
-  --color-code-light-special-char: #000;
-  --color-code-light-special-string: #000;
-  --color-code-light-string: #000;
-  --color-code-light-variable: #000;
-  --color-code-light-verbatim-string: #000;
-  --color-code-light-warning: #000;
   --system-ui: system-ui, sans-serif;
   --system-mono: ui-monospace;
   --fallback-mono: "Roboto Mono", monospace, monospace;
@@ -164,102 +110,8 @@ html {
 ::before {
   box-sizing: inherit;
 }
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-b,
-blockquote,
-body,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-main,
-menu,
-nav,
-object,
-ol,
-p,
-pre,
-q,
-s,
-samp,
-section,
-small,
-span,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-u,
-ul,
-var {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 body {
   min-height: 100%;
-}
-blockquote,
-dl,
-figure,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-menu,
-ol,
-p,
-summary,
-table,
-ul {
-  margin-bottom: var(--spacing);
 }
 blockquote {
   font-style: normal;
@@ -290,14 +142,6 @@ samp {
   font-size: var(--font-size);
   font-style: normal;
   line-height: var(--line-height);
-}
-@media screen {
-  code,
-  kbd,
-  pre,
-  samp {
-    background: var(--color-code-light-background);
-  }
 }
 code,
 kbd,
@@ -339,78 +183,7 @@ pre code {
   border-radius: 0;
   background: 0 0;
 }
-h1 {
-  margin-bottom: var(--spacing-three);
-  font-weight: 400;
-  font-size: var(--font-size-pppp);
-  line-height: var(--line-height-one);
-  text-transform: none;
-}
-h2 {
-  margin-bottom: calc(var(--spacing-two) - var(--spacing-micro));
-  font-weight: 400;
-  font-size: var(--font-size-ppp);
-  line-height: var(--line-height-one);
-  text-transform: none;
-  letter-spacing: normal;
-}
-h3 {
-  margin-bottom: calc(var(--spacing-one) + var(--spacing-micro));
-  font-weight: 400;
-  font-size: var(--font-size-pp);
-  line-height: calc(var(--line-height-one) + var(--line-height-quarter));
-  text-transform: none;
-  letter-spacing: normal;
-}
-h4 {
-  margin-bottom: var(--spacing);
-  font-weight: 700;
-  font-size: var(--font-size-p);
-  line-height: var(--line-height-one);
-  text-transform: none;
-}
-h5 {
-  margin-bottom: 0;
-  font-weight: 700;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  text-transform: none;
-  letter-spacing: normal;
-}
-h6 {
-  margin-bottom: 0;
-  font-weight: 700;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  text-transform: none;
-  letter-spacing: normal;
-}
-hr {
-  padding-left: var(--spacing);
-  border: 0;
-  margin: 0;
-  height: 1px;
-  background-color: #ffffff;
-}
-img {
-  font-style: italic;
-  vertical-align: middle;
-  max-width: 100%;
-}
-figcaption {
-  margin-top: var(--spacing);
-  font-size: var(--font-size-mm);
-  font-style: normal;
-}
-figcaption > img {
-  display: block;
-}
-dl dt {
-  font-weight: 700;
-}
-dl dd {
-  margin: 0;
-}
+
 ol li,
 ul li {
   margin-left: var(--spacing);
@@ -433,57 +206,7 @@ ul ol,
 ul ul {
   margin-bottom: 0;
 }
-audio,
-canvas,
-iframe,
-svg,
-video {
-  vertical-align: middle;
-}
-audio,
-canvas,
-video {
-  width: 100%;
-  height: auto;
-}
-@media print {
-  a,
-  a:visited {
-    color: var(--font-color);
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-  blockquote,
-  pre {
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
-  img,
-  tr {
-    page-break-inside: avoid;
-  }
-  h2,
-  h3,
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
+
 table {
   width: 100%;
   table-layout: fixed;
@@ -579,11 +302,8 @@ kbd {
   padding: 0;
   background: var(--color-ll);
   border-color: transparent;
-  padding: var(--spacing-micro) var(--spacing-half);
+  padding: var(--spacing-micro) var(--spacing-quarter);
   font-size: inherit;
-}
-.nightMode code,
-.nightMode kbd {
   background: #9a9a9a;
   color: black;
 }
@@ -617,9 +337,6 @@ table {
   text-align: left;
   border-collapse: collapse;
 }
-.nightMode table {
-  border-color: var(--color-nightmode-border);
-}
 thead tr {
   border-bottom: 1px solid var(--color-card-l);
 }
@@ -628,9 +345,6 @@ thead th {
 }
 tbody tr {
   border-bottom: 1px solid var(--color-card-ll);
-}
-.nightMode tbody tr {
-  border-color: var(--color-card-l);
 }
 tbody tr:last-of-type {
   border-bottom-color: transparent;
@@ -645,78 +359,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-.gl-Card {
-  background: transparent;
-  overflow: hidden;
-}
-.nightMode .gl-Card {
-  color: var(--color-nightmode-text);
-  /* border: 1px solid var(--color-nightmode-border); */
-}
-.gl-Card header {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
-  justify-content: space-evenly;
-  align-items: baseline;
-}
-.gl-Card header h1 {
-  flex: 0 0 100%;
-  margin: 0;
-  padding: var(--spacing-half);
-}
-.gl-Card_KeyPointNotes {
-  margin: 0;
-  margin-bottom: var(spacing-half);
-  padding: var(--spacing-half);
-  font-size: var(--font-size-p);
-  text-align: left;
-  line-height: 1.2;
-}
-.gl-Card_KeyPointNotes ul,
-.gl-Card_KeyPointNotes ol {
-  margin-left: var(--spacing-one);
-  text-align: left;
-}
-.gl-Card_KeyPointNotes ul > li,
-.gl-Card_KeyPointNotes ol > li {
-  margin-left: var(--spacing-one);
-}
-.gl-Card_KeyPointNotes small {
-  color: var(--color-card-l);
-  text-align: center;
-  display: block;
-}
-.gl-Card header code b,
-.gl-Card header code strong,
-.gl-Card header code i,
-.gl-Card header code em {
-  font-style: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-}
-
-.gl-Card_KeyPointNotes table {
-  margin: 0;
-  padding: 0;
-}
-.gl-Card_KeyPointNotes pre {
-  margin: 0;
-  padding: var(--spacing-quarter);
-  padding-top: 0;
-  padding-bottom: 0;
-  /* margin: var(--spacing-quarter); */
-  /* padding: var(--spacing-quarter); */
-}
-
-.gl-CodeBlock {
-  margin: var(--spacing-half);
-}
-.gl-CodeBlock pre {
-  margin: 0;
-  padding: var(--spacing-quarter);
-}
 
 pre,
 pre code {
@@ -724,24 +366,9 @@ pre code {
   color: var(--color-code-dark-text-color);
   font-family: var(--font-family-mono);
   background: var(--color-code-dark-background);
-  margin: 0;
-  padding: var(--spacing-quarter);
-  border-radius: 20px;
 }
 @media (orientation: portrait) {
-  .gl-Card_KeyPointNotes pre,
-  .gl-CodeBlock {
+  pre {
     font-size: var(--font-size-m);
   }
-}
-
-.gl-CodeBlock table {
-  margin: 0;
-}
-
-.gl-ImageBlock {
-  display: flex;
-}
-.gl-ImageBlock img {
-  margin: 0 auto;
 }
