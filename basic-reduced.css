@@ -1,27 +1,13 @@
 :root {
-  --color-card-l: #757575;
-  --color-card-ll: #bdbdbd;
-  --color-card-lll: #eceff1;
-  --color-card-llll: #fff;
-  --color-code-dark-background: #2c2c2c;
-  --color-code-dark-text-color: #efffff;
-  --recursive: "Recursive";
-  --font-family: var(--recursive), var(--system-ui);
-  --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
+  --color-code-dark-text-color: #eeffff;
+  --color-code-dark-background: #212121;
 }
 
 :root {
-  --color-bbbb: #000;
-  --color-ll: #ddd;
-  --color-lll: #f1f1f1;
-  --spacing-ppp: 48/16;
-  --spacing-pp: 32/16;
   --spacing-p: 24/16;
   --spacing-base: 16/16;
   --spacing-m: 8/16;
   --spacing-mm: 4/16;
-  --spacing-three: calc(var(--spacing-ppp) * 1rem);
-  --spacing-two: calc(var(--spacing-pp) * 1rem);
   --spacing: calc(var(--spacing-p) * 1rem);
   --spacing-one: calc(var(--spacing-base) * 1rem);
   --spacing-half: calc(var(--spacing-m) * 1rem);
@@ -29,26 +15,18 @@
   --system-ui: system-ui, sans-serif;
   --system-mono: ui-monospace;
   --fallback-mono: "Roboto Mono", monospace, monospace;
-  --font-color: var(--color-bbbb);
   --recursive: "Recursive";
+  --ubuntu-mono: "UbuntuMono";
   --font-family: var(--recursive), var(--system-ui);
-  --font-family-mono: var(--recursive), var(--system-mono), var(--fallback-mono);
-  --font-size-pppppp: calc((96 / 16) * 1rem);
-  --font-size-ppppp: calc((60 / 16) * 1rem);
-  --font-size-pppp: calc((48 / 16) * 1rem);
-  --font-size-ppp: calc((34 / 16) * 1rem);
-  --font-size-pp: calc((24 / 16) * 1rem);
-  --font-size-p: calc((20 / 16) * 1rem);
-  --font-size-l: calc((18 / 16) * 1rem);
+  --font-family-mono: var(--ubuntu-mono), var(--recursive), var(--system-mono),
+    var(--fallback-mono);
   --font-size: calc((16 / 16) * 1rem);
   --font-size-m: calc((14 / 16) * 1rem);
   --font-size-mm: calc((12 / 16) * 1rem);
-  --font-size-mmm: calc((11 / 16) * 1rem);
   --line-height: calc(var(--spacing-p));
   --line-height-one: calc(var(--spacing-base));
   --line-height-half: calc(var(--spacing-m));
   --line-height-quarter: calc(var(--spacing-mm));
-  /* color: var(--font-color); */
   /* font-family: var(--font-family); */
   font-size: var(--font-size);
   /* line-height: var(--line-height); */
@@ -62,38 +40,62 @@ body {
 @font-face {
   font-family: "Recursive";
   src: url("_RecursiveVariableFont.woff2") format("woff2-variations");
-  font-style: oblique 0deg 15deg;
+  /* font-style: oblique 0deg 15deg; */
   font-weight: 300 1000;
 }
 
 @font-face {
   font-family: "Consolas";
   src: url("_CONSOLA.TTF");
-  font-style: oblique 0deg 15deg;
   font-weight: 300 1000;
 }
 
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("_UbuntuMono-Italic.ttf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("_UbuntuMono-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("_UbuntuMono-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("_UbuntuMono-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
 .card {
-  /* font-family: "Calibri"; */
   font-size: 20px;
   text-align: left;
 }
 
 code,
 kbd {
-  background: var(--color-ll);
   font-family: var(--font-family-mono);
   padding: 0 var(--spacing-quarter);
   font-size: inherit;
   color: rgb(255, 255, 255);
   border-radius: 4px;
-  background-color: #363b46;
-  color: #ff8ece;
+  background: #2e2e2e !important;
+  color: #42b4ff;
 }
 
-.highlight {
-  overflow: hidden; /* Ensures background does not leak outside the border-radius */
-  margin-top: var(--spacing-half);
+code span {
+  background: transparent !important;
 }
 
 pre {
@@ -105,10 +107,9 @@ pre {
   word-break: normal; */
   tab-size: 4;
   hyphens: none;
-
-  border-radius: inherit; /* Inherits the border-radius from .highlight */
-  margin: 0; /* Avoids extra spacing */
-  padding: var(--spacing-quarter);
+  margin: 0;
+  margin-top: var(--spacing-half);
+  padding: calc(var(--spacing-half) + var(--spacing-quarter));
 }
 
 pre code {
@@ -126,41 +127,14 @@ pre code {
 pre,
 pre code {
   text-align: left;
-  color: var(--color-code-dark-text-color);
   font-family: var(--font-family-mono);
-  background: var(--color-code-dark-background);
-  padding: calc(var(--spacing-half) + var(--spacing-quarter));
+  color: var(--color-code-dark-text-color);
+  background: var(--color-code-dark-background) !important;
   font-size: var(--font-size);
 }
 
 @media (orientation: portrait) {
   pre {
-    font-size: var(--font-size-mmm);
+    font-size: var(--font-size-mm);
   }
-}
-
-table {
-  width: 100%;
-  empty-cells: show;
-  table-layout: fixed;
-  text-align: left;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-thead tr {
-  border-bottom: 1px solid var(--color-card-l);
-}
-thead th {
-  font-weight: 700;
-}
-tbody tr {
-  border-bottom: 1px solid var(--color-card-ll);
-}
-.nightMode tbody tr {
-  border-color: var(--color-card-l);
-}
-tbody tr:last-of-type {
-  border-bottom-color: transparent;
 }
