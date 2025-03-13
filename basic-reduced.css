@@ -107,8 +107,7 @@ pre {
   word-break: normal; */
   tab-size: 4;
   hyphens: none;
-  margin: 0;
-  margin-top: var(--spacing-half);
+  margin: var(--spacing-half) 0;
   padding: calc(var(--spacing-half) + var(--spacing-quarter));
 }
 
