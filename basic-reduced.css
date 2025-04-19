@@ -90,8 +90,8 @@ kbd {
   font-size: inherit;
   color: rgb(255, 255, 255);
   border-radius: 4px;
-  background: #2e2e2e !important;
-  color: #96d5ff;
+  background: #272727 !important;
+  color: #6abcf3;
 }
 
 code span {
